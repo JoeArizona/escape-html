@@ -43,22 +43,22 @@ function escapeHtml(string) {
   var index = 0;
   var lastIndex = 0;
 
-  for (index = match.index; index < str.length; index++) {
+   for (index = match.index; index < str.length; index++) {
     switch (str.charCodeAt(index)) {
       case 34: // "
-        escape = '&quot;';
+        escape = '&#x22;';
         break;
       case 38: // &
-        escape = '&amp;';
+        escape = '&#x26;';
         break;
       case 39: // '
-        escape = '&#39;';
+        escape = '&#x27;';
         break;
       case 60: // <
-        escape = '&lt;';
+        escape = '&#x3C;';
         break;
       case 62: // >
-        escape = '&gt;';
+        escape = '&#x3E;';
         break;
       default:
         continue;
